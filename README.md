@@ -34,6 +34,18 @@ This software is made available under the GPL v.3 license. It means if you run a
 ## Install
 Just run application with docker-compose:
 
-    docker-compose up -d
+```
+docker-compose up -d
+```
+
 and next point your browser to [localhost](http://localhost/). 
+
+## Administration
+
+Accessing the administrative dashboard can be done at `/dashboard`. By default, the credentials are:
+
+```
+admin/123qweasdzxc
+```
  
+This allows you to upload seeds and view hidden instance crawl details
