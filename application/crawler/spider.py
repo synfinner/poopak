@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 from .curl import query
-from  .html_extractors import Extractor
+from .html_extractors import Extractor
 from .data_storage import DataStorage
 
 import uuid
