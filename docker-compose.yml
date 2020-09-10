@@ -36,6 +36,7 @@ services:
     user: root
     volumes:
       - .:/bitnami
+      - ./logs:/opt/bitnami/mongodb/logs  
     ports:
       - "27017:27017"
     environment:
