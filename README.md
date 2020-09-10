@@ -26,12 +26,13 @@ This software is made available under the GPL v.3 license. It means if you run a
 
 ## Dependencies 
 
--   Docker (tested on Docker version 18.03.1)
--   Docker Compose (tested on version 1.21.1)
+-   Docker (tested on Docker version 19.03.8)
+-   Docker Compose (tested on version 1.25.0)
 -   Python 3
 -   pipenv
 
 ## Install
+
 Just run application with docker-compose:
 
 ```
