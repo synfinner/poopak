@@ -4,7 +4,7 @@ import datetime
 from .config_crawler import *
 
 def get_headers():
-  ua = "Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0"
+  ua = "Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0"
   headers = [
     "Connection: close",
     "User-Agent: %s"%ua
