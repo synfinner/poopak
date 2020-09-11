@@ -21,7 +21,7 @@ class Extractor:
                 is_onion =  True if '.onion' in parsed_href.netloc else False
             except TypeError:
                 is_onion =  True if '.onion' in parsed_href.netloc.decode('utf8') else False
-                pass
+                #pass
             if parsed_href.netloc != "":
                 href = urlunparse((parsed_href.scheme, parsed_href.netloc, parsed_href.path, '', parsed_href.query, ''))
             if parsed_href.netloc != "":
