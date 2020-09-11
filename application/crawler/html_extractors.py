@@ -41,7 +41,7 @@ class Extractor:
                     in_scope = True
                     href = urlunparse((parsed_url.scheme, parsed_url.netloc, parsed_href.path, '', parsed_href.query, ''))
             except TypeError:
-                if href.startswith("#"):
+                if href.startswith(b"#"):
                     in_scope = True
                     href = urlunparse((parsed_url.scheme, parsed_url.netloc, parsed_href.path, '', parsed_href.query, ''))
             _urls.append({'url': href, 'is_onion': is_onion, 'in_scope': in_scope})
