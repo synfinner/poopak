@@ -17,8 +17,13 @@ class Extractor:
             href = link.get('href')
             parsed_href = urlparse(href)
             in_scope = False
-            is_onion =  True if '.onion' in parsed_href.netloc else False
-
+            try:
+                is_onion =  True if '.onion' in parsed_href.netloc else False
+            except TypeError:
+                is_onion = True if b'.onion' in parsed_href.netloc else False
+            except Exception as e:
+                print(e)
+                pass
             if parsed_href.netloc != "":
                 href = urlunparse((parsed_href.scheme, parsed_href.netloc, parsed_href.path, '', parsed_href.query, ''))
             if parsed_href.netloc != "":
