@@ -59,7 +59,11 @@ class Spider:
         if self.response['status']:
             if 'html' in self.response:
                 data = Extractor(base_url=self.base_url, html=self.response['html'])
-                body = data.get_body()
+                try:
+                    body = data.get_body()
+                except Exception as e:
+                    print(e)
+                    body = ""
                 json_data = {'netloc': self.netloc,
                              'url': self.base_url,
                              'is_onion': self.is_onion,
