@@ -63,6 +63,13 @@
         <li><a href="{{url_for('dashboard.hs_directory',page_number=page)}}">{{ page }}</a></li>
         {% endif %}
       {% else %}
+      {% if pagination.has_prev %}
+        {% if is_all %}
+          <li><a href="{{url_for('dashboard.hs_directory', page_number=pagination.page - 1)}}">Next &laquo;</a></li>
+        {% else %}
+          <li><a href="{{url_for('dashboard.hs_directory', page_number=pagination.page - 1)}}">Next &laquo;</a></li>
+        {% endif %}
+
         {% if is_all %}
         <li><a href="{{url_for('dashboard.hs_directory',page_number=page)}}"><strong>{{ page }}</strong></a></li>
         {%else%}
