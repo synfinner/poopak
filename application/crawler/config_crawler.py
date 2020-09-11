@@ -15,8 +15,8 @@ splash_host = "splash"
 splash_port = 8050
 
 max_try_count   =   3
-REQUEST_TIMEOUT = 5
-CONNECTION_TIMEOUT = 25
+REQUEST_TIMEOUT = 10 # upped REQ timeout to 10, from 5 due to slow requests happening
+CONNECTION_TIMEOUT = 30 # upped CONN timeout to 30, from 25. 
 FOLLOWLOCATION = True
 
 SCR_PATH = "/application/files/screenshots/"
