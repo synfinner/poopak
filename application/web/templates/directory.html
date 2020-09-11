@@ -47,6 +47,13 @@
         </ul>
 
   <ul class=pagination>
+  {% if pagination.has_prev %}
+        {% if is_all %}
+          <li><a href="{{url_for('search.directory_all', page_number=pagination.page - 1)}}">&laquo; Prev</a></li>
+        {% else %}
+          <li><a href="{{url_for('search.directory', page_number=pagination.page - 1)}}">&laquo; Prev</a></li>
+        {% endif %}
+  {% endif %}
   {%- for page in pagination.iter_pages() %}
     {% if page %}
       {% if page != pagination.page %}
