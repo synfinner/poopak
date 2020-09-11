@@ -28,9 +28,14 @@ class Extractor:
                 if parsed_href.netloc == parsed_url.netloc:
                     in_scope = True
                     href = urlunparse((parsed_url.scheme, parsed_url.netloc, parsed_href.path, '', parsed_href.query, ''))
-            if href.startswith('/') or href.startswith('?'):
-                in_scope = True
-                href = urlunparse((parsed_url.scheme, parsed_url.netloc, parsed_href.path, '', parsed_href.query, ''))
+            try:
+                if href.startswith('/') or href.startswith('?'):
+                    in_scope = True
+                    href = urlunparse((parsed_url.scheme, parsed_url.netloc, parsed_href.path, '', parsed_href.query, ''))
+            except TypeError:
+                if href.startswith(b'/') or href.startswith(b'?'):
+                    in_scope = True
+                    href = urlunparse((parsed_url.scheme, parsed_url.netloc, parsed_href.path, '', parsed_href.query, ''))
             if href.startswith("#"):
                 in_scope = True
                 href = urlunparse((parsed_url.scheme, parsed_url.netloc, parsed_href.path, '', parsed_href.query, ''))
