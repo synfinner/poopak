@@ -34,8 +34,12 @@ def query(url):
 
             http_code = query.getinfo(pycurl.HTTP_CODE)
             response = output.getvalue()
-            html = response.decode('utf8')
-
+            try:
+                html = response.decode('utf8')
+            except UnicodeDecodeError:
+                html = response.decode('latin1')
+            except:
+                pass
             if http_code in http_codes:
                 if http_code == 200:
                     resp = {"url": url,
