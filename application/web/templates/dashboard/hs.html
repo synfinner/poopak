@@ -20,6 +20,7 @@
             <a href="{{url_for('dashboard.detect_exif_data', id=item._id)}}">Export report</a>
 
             <hr/>
+            Item ID: {{item._id}} <br/>
             Subjects: <br/>
             {% for item in item.subjects %}
                 <a href="" class="btn badge badge-info">{{item}}</a>,

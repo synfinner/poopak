@@ -28,7 +28,7 @@
                 {% endif %}
 
                 {% if item.title %}
-                <a target="_blank" href="http://{{item.url}}">
+                <!-- <a target="_blank" href="http://{{item.url}}"> -->
                     <span class="highlight">{{item.title}}</span> &nbsp;
 
                 </a>
@@ -39,6 +39,7 @@
                 <a target="_blank" href="http://{{item.url}}">{{item.url}}</a>
                 <span class="badge badge-primary">{{item.seen_time | datetimeformat}}</span>
                 <span style="display: inline-block;" class="badge">{{item.status}}</span>
+                <span>{{item._id}}</span>
                 {% if item.body %}
                 <p style="word-wrap: break-word;">
                     {{item.body | limitbody(256)}}
