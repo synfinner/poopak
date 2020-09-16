@@ -201,7 +201,7 @@ def faq():
 
 @searchbp.route('/export_all')
 def export_csv():
-    all = client.crawler.documents.find({'status': 200})
+    all = client.crawler.documents.find({'status': 200,'is_onion': True})
     result = "# 200 OK status list\n "
     for item in all:
         result = str("%s%s\n" % (result, item['url']))
