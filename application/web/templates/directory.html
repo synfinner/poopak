@@ -23,7 +23,7 @@
 
                 {% if item.title %}
                 <a target="_blank" href="http://{{item.url}}">
-                    <span class="highlight">{{item.title}}</span>
+                    <span class="highlight"><b>{{item.title}}</b></span>
 
                 </a>
                 <a style="display: inline-block;" class="btn badge badge-danger" href="{{url_for('search.report', id=item._id) }}" >report</a>
