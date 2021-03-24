@@ -33,7 +33,7 @@ services:
   mongodb:
     image: 'bitnami/mongodb:latest'
     hostname: mongodb
-    user: root
+    user: '1001'
     volumes:
       - .:/bitnami
       - ./logs:/opt/bitnami/mongodb/logs  
