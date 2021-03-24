@@ -40,7 +40,6 @@ services:
     ports:
       - "27017:27017"
     environment:
-        - BITNAMI_DEBUG=true
         - MONGODB_ROOT_PASSWORD=123qwe
         - MONGODB_USERNAME=admin
         - MONGODB_PASSWORD=123qwe
